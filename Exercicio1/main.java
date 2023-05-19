@@ -1,42 +1,29 @@
 package Exercicio1;
 
-import javax.swing.*;
-import java.util.Scanner;
+// Coloquei meu Scanner no Construtor
 
 public class main {
     public static void main(String[] args) {
-        Caixa caixa = new Caixa(1000);
+        Caixa caixa = new Caixa();
 
-        Scanner entrada = new Scanner(System.in);
         System.out.println("Quantos lançamentos deseja fazer?");
-        double entradaResposta = entrada.nextDouble();
-
-
+        double entradaResposta = caixa.getLer();
 
         for( int i=0; i < entradaResposta; i++){
             System.out.println("Digite 1 para Débito e 2 para Crédito");
-            entradaResposta = entrada.nextDouble();
+            double entradaResposta1 = caixa.getLer();
 
-
-            if(entradaResposta==1){
+            if(entradaResposta1==1){
                 System.out.println("Qual valor deseja sacar?");
-                entradaResposta = entrada.nextDouble();
+                System.out.println("Saldo atual: " + caixa.caucularDebito());
 
-
-                caixa.setSaldo(caixa.getSaldo()-entradaResposta);
-                System.out.println(caixa.getSaldo());
-
-            } else if (entradaResposta==2) {
+            } else if (entradaResposta1==2) {
                 System.out.println("Qual valor deseja depositar?");
-                entradaResposta = entrada.nextDouble();
+                System.out.println("Saldo atual: " + caixa.caucularCredito());
 
-                caixa.setSaldo(caixa.getSaldo()+entradaResposta);
-                System.out.println(caixa.getSaldo());
             }else{
                 System.out.println("Opção invalida");
             }
-
-
         }
     }
 }

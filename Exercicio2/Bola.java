@@ -7,12 +7,12 @@ public class Bola {
     private String marca;
     private String materal;
 
-    public Bola(double velocidadeConstrutor,double circunferenciaConstrutor, String corConstrutor,String marcaConstrutor, String materialConstrutor) {
-        this.circunferencia = circunferenciaConstrutor;
-        this.velocidade = velocidadeConstrutor;
-        this.cor = corConstrutor;
-        this.marca = marcaConstrutor;
-        this.materal = materialConstrutor;
+    public Bola() {
+        this.circunferencia = 20;
+        this.velocidade = 60;
+        this.cor = "Rosa";
+        this.marca = "Nike";
+        this.materal = "Poliuretano";
     }
     public void setCor(String corConstrutor) {
         this.cor = corConstrutor;

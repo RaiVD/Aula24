@@ -1,34 +1,32 @@
 package Exercicio5;
 
-import javax.management.monitor.StringMonitor;
+// Coloquei meu Scanner no Construtor
 
 public class Carro {
     private int quantidadePortas;
-    private String modelo;
-    private String marca;
+    private String modelo, marca, chave;
     private double potencia;
-    private  String chave;
-
-    public Carro(int quantidadePortas1, String modelo2, String marca3, double potencia4, String chaves) {
-        this.quantidadePortas = quantidadePortas1;
-        this.modelo = modelo2;
-        this.marca = marca3;
-        this.potencia = potencia4;
-        this.chave = chaves;
+    public Carro() {
+        this.quantidadePortas = 4;
+        this.modelo = "Civic";
+        this.marca = "Honda";
+        this.potencia = 2.0;
+        this.chave = "chaves";
     }
-
     public int getQuantidadePortas() {
         return quantidadePortas;
     }
     public String getModelo() {
         return modelo;
-    }  public String getMarca() {
+    }
+    public String getMarca() {
         return marca;
-    }  public double getPotencia() {
+    }
+    public double getPotencia() {
         return potencia;
     }
     public String getChave() {
-    return chave;
+        return chave;
     }
 
 
